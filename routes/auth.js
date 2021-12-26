@@ -35,10 +35,5 @@ router.get('/signout', (req,res,next) => {
         'message' : 'signout_successfull'
     })
 })
-router.get('/profile', (req,res,next) => {
-    res.status(200).json({
-        'status' : 'done',
-        'message' : 'kökteki profil'
-    })
-})
+
 module.exports= router;
