@@ -1,39 +1,39 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res,next) => {
+router.get('/', (req, res, next) => {
     res.status(200).json({
-        "status" : "done",
-        "message" : "auth successfull" 
+        "status": "done",
+        "message": "auth successfull"
     })
 })
 
-router.get('/login', (req,res,next) => {
+router.get('/login', (req, res, next) => {
     res.status(200).json({
-        "status" : "done",
-        "message" : "login successfull" 
+        "status": "done",
+        "message": "login successfull"
     })
 })
 
-router.get('/signup', (req,res,next) => {
+router.get('/signup', (req, res, next) => {
     res.status(200).json({
-        "status" : "done",
-        "message" : "signup successfull" 
+        "status": "done",
+        "message": "signup successfull"
     })
 })
 
-router.get('/forget_password', (req,res,next) => {
+router.get('/forget_password', (req, res, next) => {
     res.status(200).json({
-        'status' : 'done',
-        'message' : 'Forget password?'
+        'status': 'done',
+        'message': 'Forget password?'
     })
-    
+
 })
-router.get('/logout', (req,res,next) => {
+router.get('/logout', (req, res, next) => {
     res.status(200).json({
-        'status' : 'done',
-        'message' : 'logout_successfull'
+        'status': 'done',
+        'message': 'logout_successfull'
     })
 })
 
-module.exports= router;
+module.exports = router;
