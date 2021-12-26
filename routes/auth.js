@@ -29,10 +29,10 @@ router.get('/forget_password', (req,res,next) => {
     })
     
 })
-router.get('/signout', (req,res,next) => {
+router.get('/logout', (req,res,next) => {
     res.status(200).json({
         'status' : 'done',
-        'message' : 'signout_successfull'
+        'message' : 'logout_successfull'
     })
 })
 
