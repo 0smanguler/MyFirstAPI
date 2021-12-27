@@ -1,8 +1,10 @@
 const express = require('express'); //çağırıyor. express modulu.
 const app = express ();
 
-const BlogRoutes = require('./routes/auth')
+const AuthRoutes = require('./routes/auth')
+const BlogRoutes = require('./routes/blog')
 
+app.use('/auth', AuthRoutes)
 app.use('/blog', BlogRoutes)
 
 
