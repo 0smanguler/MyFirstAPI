@@ -13,6 +13,16 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/:id', (req, res, next) => {
+
+    const input_id = req.params.id
+
+    res.status(200).json({
+        status: 'Message',
+        message: input_id
+    })
+})
+
 router.delete('/delete', (req, res, next) => {
     res.status(200).json({
         status: 'delete succesfull'

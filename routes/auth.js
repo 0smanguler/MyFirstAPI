@@ -8,6 +8,16 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/:id', (req, res, next) => {
+
+    const input_id = req.params.id
+
+    res.status(200).json({
+        status: 'Auth',
+        message: input_id
+    })
+})
+
 router.get('/login', (req, res, next) => {
     res.status(200).json({
         "status": "done",
