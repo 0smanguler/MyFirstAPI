@@ -3,6 +3,15 @@ const router = express.Router();
 
 // todo
 // blog oluşturulacak çünkü blog endpointine post metodunda bir request 
+router.get('/', (req, res, next) => {
+    res.status(200).json({
+        status: 'done'
+    })
+})
+
+
+
+
 router.post('/blog', (req, res, next) => {
     res.status(200).json({
         "status": "done",
@@ -23,7 +32,7 @@ router.get('/blog', (req, res, next) => {
 // todo
 // blog silinecek çünkü blog endpointine delete metodunda bir request 
 
-router.delete('/blog', (req, res, next) => {
+router.delete('/', (req, res, next) => {
     res.status(200).json({
         "status": "done",
         "message": "auth successfull"
@@ -35,8 +44,8 @@ router.delete('/blog', (req, res, next) => {
 
 router.patch('/blog', (req, res, next) => {
     res.status(200).json({
-        "status": "done",
-        "message": "auth successfull"
+        "status": "HURRRAAA",
+        "message": "SORUN OKEY"
     })
 })
 module.exports = router;
