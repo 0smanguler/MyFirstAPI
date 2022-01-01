@@ -13,14 +13,28 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/:id', (req, res, next) => {
+router.get('/:name', (req, res, next) => {
 
-    const input_id = req.params.id
+    const name = req.params.name
 
-    res.status(200).json({
-        status: 'Message',
-        message: input_id
-    })
+    if (name == 'osman') {
+        res.status(200).json({
+            status: 'Message',
+            message: 'siktiret o salağı'
+        })
+    }
+    if (name == 'suleyman') {
+        res.status(200).json({
+            status: 'Message',
+            message: 'kral geliyor kraalll'
+        })
+    }
+    else {
+        res.status(200).json({
+            status: 'Blog',
+            message: name
+        })
+    }
 })
 
 router.delete('/delete', (req, res, next) => {

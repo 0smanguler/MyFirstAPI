@@ -1,20 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-// CHALLENGE: blog auth ve message için id isminde bir request parametresi alan 
-// ve bunu response da bulunduran
-// endpointler açılacak
-
 router.get('/', (req, res, next) => {
     res.status(200).json({
         status: 'Blog'
     })
 })
-
-
-// site.com/blog                        =====>> Bütün blog yazolarını getirsin.
-// site.com/blog/askjdahsdaksjdh123     =====>> sadece 'askjdahsdaksjdh123' id li blog yazısı gelsin.
-
 
 router.get('/:id', (req, res, next) => {
 
@@ -29,7 +20,6 @@ router.get('/:id', (req, res, next) => {
 
 router.get('/blog', (req, res, next) => {
 
-    const input_id = req.params.id
     res.status(200).json({
         "status": "done",
         "message": "auth successfull"

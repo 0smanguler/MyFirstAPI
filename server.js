@@ -1,13 +1,10 @@
-const http = require('http'); //npm paketini
-const app= require('./app')
+const http = require('http');
+const app = require('./app')
 
 const port = 3000;
 
 const server = http.createServer(app);
 
-server.listen(port);
-
-// Veya = ||
-// Ve = &&
-
-//require dışarıdan bir paketin veya js dosyasını içeriye aktarmak için kullanılır
+server.listen(port, () => {
+    console.log('API RUNNING ON 3000')
+});
