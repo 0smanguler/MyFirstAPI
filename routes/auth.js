@@ -18,8 +18,15 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
-router.get('/login', (req, res, next) => {
+router.post('/login', (req, res, next) => {
+    
+    const user_name = req.body.user_name
+    const password = req.body.password
+
     res.status(200).json({
+       "kullaniciadi" : user_name,
+       "sifre" : password,
+       
         "status": "done",
         "message": "login successfull"
     })

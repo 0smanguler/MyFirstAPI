@@ -13,9 +13,17 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/:name', (req, res, next) => {
+router.post('/name', (req, res, next) => {
 
-    const name = req.params.name
+    const name = req.body.name
+    const password = req.body.password
+
+    if (name== "ugur") {
+        res.status(200).json({
+            status: password,
+            message: name
+        })
+    }
 
     if (name == 'osman') {
         res.status(200).json({

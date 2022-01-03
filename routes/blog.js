@@ -12,11 +12,14 @@ router.get('/:id', (req, res, next) => {
 })
 
 
-router.get('/blog', (req, res, next) => {
+router.post('/blog', (req, res, next) => {
+
+    const text = req.body.text
+    const title = req.body.title
 
     res.status(200).json({
-        "status": "done",
-        "message": "auth successfull"
+        status : text,
+        message : title
     })
 })
 
