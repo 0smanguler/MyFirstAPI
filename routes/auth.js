@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/login', (req, res, next) => {
+router.post('/login', (req, res, next) => {
     res.status(200).json({
         "status": "done",
         "message": "login successfull"

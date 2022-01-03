@@ -4,7 +4,7 @@ const router = express.Router();
 // todo
 // blog oluşturulacak çünkü blog endpointine post metodunda bir request 
 router.post('/blog', (req, res, next) => {
-    res.status(200).json({
+    res.status(201).json({
         "status": "done",
         "message": "auth successfull"
     })
@@ -34,7 +34,7 @@ router.delete('/blog', (req, res, next) => {
 // blog güncelllenecek çünkü blog endpointine patch metodunda bir request 
 
 router.patch('/blog', (req, res, next) => {
-    res.status(200).json({
+    res.status(204).json({
         "status": "done",
         "message": "auth successfull"
     })
